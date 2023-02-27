@@ -15,6 +15,10 @@ let next = document.querySelector(".next");
 let currentPage = 1;
 let pageTotalCount = 1;
 
+// search
+let search = document.querySelector("#search");
+let searchVal = "";
+
 //  elements for edit
 let edittitle = document.querySelector("#edit-title");
 let editprice = document.querySelector("#edit-price");
@@ -224,9 +228,7 @@ next.addEventListener("click", () => {
   render();
 });
 
-document.addEventListener("click", (e) => {
-  if (e.target.classList.contains("page_number")) {
-    currentPage = e.target.innerText;
-    render();
-  }
+search.addEventListener("input", () => {
+  searchVal = search.value;
+  render();
 });
