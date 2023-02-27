@@ -1,12 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
+    <!-- navbar start -->
+    <nav class="navbar bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <form class="d-flex" role="search">
+          <input
+            id="search"
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+    <!-- navbar end -->
+    <!-- ADMIN PANEL start -->
+    <div class="admin mt-5 d-flex flex-column w-100 align-items-center">
+      <h2>ADMIN PANEL</h2>
+      <input
+        id="title"
+        type="text"
+        class="w-50 mb-2 form-control"
+        placeholder="title"
+      />
+      <input
+        id="price"
+        type="text"
+        class="w-50 mb-2 form-control"
+        placeholder="price"
+      />
+      <input
+        id="desc"
+        type="text"
+        class="w-50 mb-2 form-control"
+        placeholder="description"
+      />
+      <input
+        id="image"
+        type="text"
+        class="w-50 mb-2 form-control"
+        placeholder="image URL"
+      />
+      <button id="btn-add" class="btn btn-dark w-50">Add product</button>
+    </div>
+    <!-- ADMIN PANEL end -->
+    <!-- CONTENT START -->
+    <div
+      id="product-list"
+      class="d-flex flex-wrap justify-content-center"
+    ></div>
+    <!-- CONTENT END -->
+    <!-- MODAL EDIT START -->
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              EDIT PRODUCT
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex flex-column w-100 align-items-center">
+              <!-- <h2>ADMIN PANEL</h2> -->
+              <input
+                id="edit-title"
+                type="text"
+                class="mb-2 form-control"
+                placeholder="title"
+              />
+              <input
+                id="edit-price"
+                type="text"
+                class="mb-2 form-control"
+                placeholder="price"
+              />
+              <input
+                id="edit-desc"
+                type="text"
+                class="mb-2 form-control"
+                placeholder="description"
+              />
+              <input
+                id="edit-image"
+                type="text"
+                class="mb-2 form-control"
+                placeholder="image URL"
+              />
+              <!-- <button id="btn-add" class="btn btn-dark w-50">
+                Add product
+              </button> -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button id="btn-save-edit" type="button" class="btn btn-primary">
+              Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL EDIT END -->
+    <!-- PAGINATION START -->
+    <nav aria-label="Page navigation example">
+      <ul class="pagination d-flex justify-content-center">
+        <li class="page-item prev">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <!-- <li class="page-item"><a class="page-link" href="#">1</a></li> -->
+        <div class="pagination-list d-flex"></div>
+        <li class="page-item next">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- PAGINATION END -->
     <script src="./main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
