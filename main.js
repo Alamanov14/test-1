@@ -234,3 +234,5 @@ search.addEventListener("input", () => {
 });
 
 console.log("Hello World");
+
+console.log(12345);
