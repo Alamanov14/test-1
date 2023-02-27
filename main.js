@@ -233,4 +233,4 @@ search.addEventListener("input", () => {
   render();
 });
 
-console.log("Hello world");
+console.log("Hallo Welt");
