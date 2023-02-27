@@ -14,9 +14,6 @@ let prev = document.querySelector(".prev");
 let next = document.querySelector(".next");
 let currentPage = 1;
 let pageTotalCount = 1;
-// search
-let search = document.querySelector("#search");
-let searchVal = "";
 
 //  elements for edit
 let edittitle = document.querySelector("#edit-title");
@@ -59,7 +56,7 @@ btnAdd.addEventListener("click", async () => {
 // function for read product-list
 async function render() {
   // product-list from server
-  let res = await fetch(`${API}?q=${searchVal}&_page=${currentPage}&_limit=3`);
+  let res = await fetch(`${API}?q=&_page=${currentPage}&_limit=3`);
   let products = await res.json();
   console.log(searchVal);
   // clear list
@@ -232,9 +229,4 @@ document.addEventListener("click", (e) => {
     currentPage = e.target.innerText;
     render();
   }
-});
-
-search.addEventListener("input", () => {
-  searchVal = search.value;
-  render();
 });
