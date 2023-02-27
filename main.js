@@ -230,3 +230,5 @@ document.addEventListener("click", (e) => {
     render();
   }
 });
+
+console.log("Hello world");
